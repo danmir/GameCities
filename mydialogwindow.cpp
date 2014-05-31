@@ -100,8 +100,10 @@ void MyDialogWindow::game_ended(){
         final_text = "Вы победили со счетом: " + p1_s + ":" + p2_s;
     else if (p2_score > p1_score)
         final_text = "Вы  проиграли со счетом: " + p2_s + ":" + p1_s;
-    else
-        final_text = "Ничья: " + p1_s + ":" + p2_s;
+    else {
+        QString p2_s = QString::number(player2->score + 1);
+        final_text = "Вы сдались, а значит компьютер выиграл со счетом " + p2_s + ":" + p1_s;
+    }
     QMessageBox::information(this, "Игра окончена", final_text);
     QCoreApplication::quit();
 }
