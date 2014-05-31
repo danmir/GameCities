@@ -9,6 +9,7 @@
 #include <QFile>
 #include <QString>
 #include <QDebug>
+#include <QTime>
 #include <QTextStream>
 #include <QApplication>
 #include <QMessageBox>
