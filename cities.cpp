@@ -20,6 +20,7 @@ void Cities::read(QString Filename)
     }
 
     QTextStream in(&mFile);
+    in.setCodec("UTF-8"); // change the file codec to UTF-8.
 
     while(!in.atEnd()) {
         QString line = in.readLine();
